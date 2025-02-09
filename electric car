@@ -1,0 +1,33 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package vihicle;
+
+/**
+ *
+ * @author USER
+ */
+public class electricar extends vehicle{
+    private double batterycapacity;
+    private int numberofwheels;
+    private int numberOfDoors;
+    
+    public electricar(String make, String model, double rentalPrice,int daystorental,double discount, double batterycapacity,int numberofwheels,int numberOfDoors) {
+        super(make, model, rentalPrice,daystorental,discount);
+        this.batterycapacity = batterycapacity;
+        this.numberofwheels= numberofwheels;
+         this.numberOfDoors = numberOfDoors;
+    }
+        @Override
+    public void displayDetails() {
+        super.displayDetails(); 
+        System.out.println("Number of Doors: " + numberOfDoors);
+        System.out.println("number of wheels: "+ numberofwheels);
+            System.out.println("MAXIMUM BATTERY CAPACITY: "+ batterycapacity+"kWh");
+       
+    } @Override
+    public void performMaintenance() {
+        System.out.println("Checking battery health and charging system.");
+    }
+}
