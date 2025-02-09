@@ -1,0 +1,37 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package vihicle;
+
+/**
+ *
+ * @author USER
+ */
+public class car extends vehicle{
+      private int numberOfDoors;
+      private int numberofwheels;
+      private String turbomode;
+    
+
+    public car(String make, String model, double rentalPrice,int daystorental,double discount, int numberOfDoors, int numberofwheels,String turbomode) {
+        super(make, model, rentalPrice,daystorental,discount);
+        this.numberOfDoors = numberOfDoors;
+        this.numberofwheels=numberofwheels;
+        this.turbomode=turbomode;
+    }
+    
+
+    @Override
+    public void displayDetails() {
+        super.displayDetails(); 
+        System.out.println("Number of Doors: " + numberOfDoors);
+        System.out.println("number of wheels: "+ numberofwheels);
+        System.out.println("Maximum speed of turbo mode: "+ turbomode);
+    }@Override
+    public void performMaintenance() {
+        System.out.println("Performing general car maintenance.");
+    }
+}
+
+
