@@ -1,0 +1,51 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package vihicle;
+
+/**
+ *
+ * @author USER
+ */
+public class Vihicle {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        vehicle[] vehicles = new vehicle[7];
+        
+        vehicles[0] = new car("GTR", "Camr", 50.0,2,0.10, 4,4,"800km/hour");
+         vehicles[1] = new truck("MASDA", "F-200", 80.0,2,0.10, 2.5,10,2);
+          vehicles[2] = new motorcycle("BARAKO", "pambukid 750", 40.0,3,0.10, false,2);
+         vehicles[3]=new electricar ("TESLA","CYBER TRUCK",100.0,3,0.10,1000,4,4);
+
+
+       
+        
+        int rentalDays = 3;
+        int rental=30;
+        double discount=0;
+        
+        
+        for (vehicle i : vehicles) {
+            double tot=0;
+            double total=0;
+             
+             tot=i.rentalPrice*i.daystorental;
+             total=tot-i.rentaldiscount(discount);
+            i.displayDetails();
+            System.out.println("Rental Cost for " + rentalDays + " days: $" + i.calculateRentalCost(rentalDays));
+            System.out.println("Rental cost for "+ rental+ "days: $"+ i.calculateRentalCost(rental));
+            System.out.println("discount: "+i.rentaldiscount(discount));
+            System.out.println("Total: "+ tot);
+            System.out.println("Your total payment: "+ total);
+            System.out.println("-----------------------------");
+            
+            
+        }
+    }
+}
+
+  
