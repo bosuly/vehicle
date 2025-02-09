@@ -1,0 +1,54 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package vihicle;
+
+/**
+ *
+ * @author USER
+ */
+public abstract class vehicle {
+    protected String make;
+    protected String model;
+    protected double rentalPrice;
+    protected int daystorental;
+
+    public vehicle(String make, String model, double rentalPrice, int daystorental,double discount) {
+        this.make = make;
+        this.model = model;
+        this.rentalPrice = rentalPrice;
+        this.daystorental = daystorental;
+    }
+
+    public void displayDetails() {
+        System.out.println("Vehicle Details:");
+        System.out.println("Minimum of 3 days rental is get discount of 10 percent: ");
+        System.out.println("Make: " + make);
+        System.out.println("Model: " + model);
+        System.out.println("Rental Price per Day: $" + rentalPrice);
+        System.out.println("Days to Rental: " + daystorental);
+    } public double daystorent(double totals) {
+       
+        return daystorental;
+    }
+    
+  
+    public double calculateRentalCost(int days) {
+        return rentalPrice * days;
+    }
+     public double rentaldiscount(double discount) {
+         double k=0;
+         if(daystorental==3){
+        double j= rentalPrice * 3;
+               k=j*0.10;
+         }else{
+             
+         }
+              return k;
+     }
+       public abstract void performMaintenance(
+       );
+}
+
+
